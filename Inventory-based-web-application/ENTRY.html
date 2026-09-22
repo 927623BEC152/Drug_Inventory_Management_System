@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management Dashboard</title>
+    <link rel="stylesheet" href="styletoentry.css">
+</head>
+<body>
+    <h1>Management Dashboard</h1>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="section-block">
+        <h2>Select a Section</h2>
+        <button id="manufacture-btn" class="dash-btn">Manufacture</button>
+        <button id="warehouse-btn" class="dash-btn">Warehouse</button>
+        <button id="vendor-btn" class="dash-btn">Vendor</button>
+    </section>
+
+    <!-- Manufacture Section -->
+    <section id="manufacture" class="section-block" style="display:none;">
+        <h2>Manufacture - Enter Order Details</h2>
+        <form>
+            <label for="manufacture-login-id">Login ID:</label>
+            <input type="text" id="manufacture-login-id" name="login-id"><br><br>
+
+            <label for="order-id">Order ID:</label>
+            <input type="text" id="order-id" name="order-id"><br><br>
+
+            <label for="product-name">Drug Name:</label>
+            <input type="text" id="product-name" name="product-name"><br><br>
+
+            <label for="quantity">Order Quantity:</label>
+            <input type="number" id="quantity" name="quantity"><br><br>
+
+            <label for="order-date">Order Date:</label>
+            <input type="date" id="order-date" name="order-date"><br><br>
+
+            <label for="supplied-to-warehouse">Supplied to Warehouse:</label>
+            <input type="text" id="supplied-to-warehouse" name="supplied-to-warehouse"><br><br>
+
+            <input type="submit" value="Submit Order">
+        </form>
+    </section>
+
+    <!-- Warehouse Section -->
+    <section id="warehouse" class="section-block" style="display:none;">
+        <h2>Warehouse - Enter Delivery & Return Details</h2>
+        
+        <!-- Delivery Details -->
+        <form>
+            <h3>Delivery Details</h3>
+            <label for="warehouse-login-id">Login ID:</label>
+            <input type="text" id="warehouse-login-id" name="login-id"><br><br>
+
+            <label for="delivery-id">Delivery ID:</label>
+            <input type="text" id="delivery-id" name="delivery-id"><br><br>
+
+            <label for="drug-name">Drug Name:</label>
+            <input type="text" id="drug-name" name="drug-name"><br><br>
+
+            <label for="supplied-to-vendor">Supplied to Vendor:</label>
+            <input type="text" id="supplied-to-vendor" name="supplied-to-vendor"><br><br>
+
+            <label for="delivery-date">Delivery Date:</label>
+            <input type="date" id="delivery-date" name="delivery-date"><br><br>
+
+            <label for="delivery-quantity">Delivery Quantity:</label>
+            <input type="number" id="delivery-quantity" name="delivery-quantity"><br><br>
+
+            <input type="submit" value="Submit Delivery">
+        </form>
+
+        <!-- Check Received Item with Order ID -->
+        <form>
+            <h3>Check Received Item with Order ID</h3>
+            <label for="warehouse-check-login-id">Login ID:</label>
+            <input type="text" id="warehouse-check-login-id" name="login-id"><br><br>
+
+            <label for="warehouse-check-order-id">Order ID:</label>
+            <input type="text" id="warehouse-check-order-id" name="order-id"><br><br>
+
+            <input type="submit" value="Check Item">
+        </form>
+
+        <!-- Return Details -->
+        <form>
+            <h3>Return Details</h3>
+            <label for="warehouse-return-login-id">Login ID:</label>
+            <input type="text" id="warehouse-return-login-id" name="login-id"><br><br>
+
+            <label for="warehouse-name">Manufacture Name:</label>
+            <input type="text" id="warehouse-name" name="warehouse-name"><br><br>
+
+            <label for="return-id">Return ID:</label>
+            <input type="text" id="return-id" name="return-id"><br><br>
+
+            <label for="return-drug-name">Drug Name:</label>
+            <input type="text" id="return-drug-name" name="drug-name"><br><br>
+
+            <label for="return-quantity">Drug Quantity:</label>
+            <input type="number" id="return-quantity" name="return-quantity"><br><br>
+
+            <label for="return-date">Return Date:</label>
+            <input type="date" id="return-date" name="return-date"><br><br>
+
+            <label for="return-reason">Reason:</label>
+            <textarea id="return-reason" name="return-reason"></textarea><br><br>
+
+            <input type="submit" value="Submit Return">
+        </form>
+    </section>
+
+    <!-- Vendor Section -->
+    <section id="vendor" class="section-block" style="display:none;">
+        <h2>Vendor - Enter Delivery & Return Details</h2>
+
+        <!-- Delivery Details -->
+        <form>
+            <h3>Delivery Details</h3>
+            <label for="vendor-login-id">Login ID:</label>
+            <input type="text" id="vendor-login-id" name="login-id"><br><br>
+
+            <label for="vendor-delivery-id">Delivery ID:</label>
+            <input type="text" id="vendor-delivery-id" name="vendor-delivery-id"><br><br>
+
+            <label for="vendor-drug-name">Drug Name:</label>
+            <input type="text" id="vendor-drug-name" name="drug-name"><br><br>
+
+            <label for="delivery-date">Delivery Date:</label>
+            <input type="date" id="delivery-date" name="delivery-date"><br><br>
+
+            <label for="delivery-quantity">Delivery Quantity:</label>
+            <input type="number" id="delivery-quantity" name="delivery-quantity"><br><br>
+
+            <input type="submit" value="Submit Delivery">
+        </form>
+
+        <!-- Check Received Item with Order ID -->
+        <form>
+            <h3>Check Received Item with Order ID</h3>
+            <label for="vendor-check-login-id">Login ID:</label>
+            <input type="text" id="vendor-check-login-id" name="login-id"><br><br>
+
+            <label for="vendor-check-order-id">Order ID:</label>
+            <input type="text" id="vendor-check-order-id" name="order-id"><br><br>
+
+            <input type="submit" value="Check Item">
+        </form>
+
+        <!-- Return Details -->
+        <form>
+            <h3>Return Details</h3>
+            <label for="vendor-return-login-id">Login ID:</label>
+            <input type="text" id="vendor-return-login-id" name="login-id"><br><br>
+
+            <label for="vendor-warehouse-name">Warehouse Name:</label>
+            <input type="text" id="vendor-warehouse-name" name="warehouse-name"><br><br>
+
+            <label for="vendor-return-id">Return ID:</label>
+            <input type="text" id="vendor-return-id" name="return-id"><br><br>
+
+            <label for="vendor-return-drug-name">Drug Name:</label>
+            <input type="text" id="vendor-return-drug-name" name="drug-name"><br><br>
+
+            <label for="vendor-return-quantity">Drug Quantity:</label>
+            <input type="number" id="vendor-return-quantity" name="return-quantity"><br><br>
+
+            <label for="vendor-return-date">Return Date:</label>
+            <input type="date" id="vendor-return-date" name="return-date"><br><br>
+
+            <label for="vendor-return-reason">Reason:</label>
+            <textarea id="vendor-return-reason" name="return-reason"></textarea><br><br>
+
+            <input type="submit" value="Submit Return">
+        </form>
+    </section>
+
+    <script src="scripttoentry.js"></script>
+</body>
+</html>
